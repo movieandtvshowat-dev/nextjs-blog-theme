@@ -2,9 +2,6 @@ User-agent: *
 Allow: /
 Sitemap: https://movieandtvshowat.netlify.app/sitemap.xml
 
-# Crawl delay
-Crawl-delay: 1
-
 # Allow all bots
 User-agent: Googlebot
 Allow: /
