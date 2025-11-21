@@ -2,29 +2,30 @@
 // import './globals.css'
 // import { Inter } from 'next/font/google'
 // import Footer from '../components/Footer'
+// import Script from 'next/script'
 
 // const inter = Inter({ subsets: ['latin'] })
 
 // const baseUrl = 'https://movieandtvshowat.netlify.app'
 
 // export const metadata = {
-//   title: 'Movie & Tvshow - Watch Movies & TV Shows Online',
-//   description: 'Stream thousands of movies and TV shows in HD quality. New content added daily.',
+//   title: 'Movie On Demand - Request Any Movie via Telegram',
+//   description: 'Movie On Demand Service - Request any movie via Telegram by sending movie name, year, and language. We add requested movies within 24 hours.',
 //   metadataBase: new URL(baseUrl),
 //   alternates: {
 //     canonical: '/',
 //   },
 //   openGraph: {
-//     title: 'Movie & Tvshow - Watch Movies & TV Shows Online',
-//     description: 'Stream thousands of movies and TV shows in HD quality. New content added daily.',
+//     title: 'Movie On Demand - Request Any Movie via Telegram',
+//     description: 'Movie On Demand Service - Request any movie via Telegram by sending movie name, year, and language. We add requested movies within 24 hours.',
 //     url: baseUrl,
-//     siteName: 'Movie & Tvshow',
+//     siteName: 'Movie On Demand',
 //     images: [
 //       {
 //         url: '/og-image.jpg',
 //         width: 1200,
 //         height: 630,
-//         alt: 'Movie & Tvshow - Watch Movies & TV Shows Online',
+//         alt: 'Movie On Demand - Request Any Movie via Telegram',
 //       },
 //     ],
 //     locale: 'en_US',
@@ -32,8 +33,8 @@
 //   },
 //   twitter: {
 //     card: 'summary_large_image',
-//     title: 'Movie & Tvshow - Watch Movies & TV Shows Online',
-//     description: 'Stream thousands of movies and TV shows in HD quality. New content added daily.',
+//     title: 'Movie On Demand - Request Any Movie via Telegram',
+//     description: 'Movie On Demand Service - Request any movie via Telegram by sending movie name, year, and language.',
 //     images: ['/og-image.jpg'],
 //   },
 //   robots: {
@@ -80,15 +81,15 @@
 //         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
 //         {/* Additional Meta Tags */}
-//         <meta name="keywords" content="watch movies online, hollywood movies, bollywood movies, latest movies, hd movies, movie streaming, english movies, hindi movies, telugu movies, tamil movies, free movies, tv shows, series" />
-//         <meta name="author" content="Movie & Tvshow" />
+//         <meta name="keywords" content="movie on demand, request movies, telegram movie request, watch movies online, movie streaming, on demand movies" />
+//         <meta name="author" content="Movie On Demand" />
 //         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 //         <meta name="googlebot" content="index, follow" />
 //         <meta name="language" content="English" />
 //         <meta name="revisit-after" content="1 days" />
 //         <meta name="rating" content="general" />
 //         <meta name="distribution" content="global" />
-        
+//         <meta name="google-site-verification" content="YCq885c0NImaJxQH2uq4XPr2sUSQbti5uv2MPTa3Yrg" />
 //         {/* Sitemap */}
 //         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         
@@ -100,10 +101,10 @@
 //         <meta property="og:image:width" content="1200" />
 //         <meta property="og:image:height" content="630" />
 //         <meta property="og:image:type" content="image/jpeg" />
-//         <meta property="og:image:alt" content="Movie & Tvshow - Watch Movies & TV Shows Online" />
+//         <meta property="og:image:alt" content="Movie & Tvshow - On Demand & Request Any Movie via Telegram" />
         
 //         {/* Additional Twitter Tags */}
-//         <meta name="twitter:image:alt" content="Movie & Tvshow - Watch Movies & TV Shows Online" />
+//         <meta name="twitter:image:alt" content="Movie & Tvshow - On Demand & Request Any Movie via Telegram" />
         
 //         {/* Structured Data */}
 //         <script
@@ -114,7 +115,7 @@
 //               "@type": "WebSite",
 //               "name": "Movie & Tvshow",
 //               "url": baseUrl,
-//               "description": "Stream thousands of movies and TV shows in HD quality. New content added daily.",
+//               "description": "Movie On Demand Service - Request any movie via Telegram by sending movie name, year, and language. We add requested movies within 24 hours.",
 //               "potentialAction": {
 //                 "@type": "SearchAction",
 //                 "target": `${baseUrl}/search?query={search_term_string}`,
@@ -132,13 +133,28 @@
 //           }}
 //         />
 //       </head>
-//       <body className={`${inter.className} bg-netflix-black text-white`}>
+//       <body className={`${inter.className} bg-black text-white`}>
+//            <Script
+//           src="https://www.googletagmanager.com/gtag/js?id=G-DJ9EBBT26N"
+//           strategy="afterInteractive"
+//         />
+//         <Script id="google-analytics" strategy="afterInteractive">
+//           {`
+//             window.dataLayer = window.dataLayer || [];
+//             function gtag(){dataLayer.push(arguments);}
+//             gtag('js', new Date());
+//             gtag('config', 'G-DJ9EBBT26N');
+//           `}
+//         </Script>
+        
 //         {children}
 //         <Footer />
 //       </body>
 //     </html>
 //   )
 // }
+
+
 
 
 
@@ -280,7 +296,8 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-black text-white`}>
-           <Script
+        {/* Google Analytics */}
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DJ9EBBT26N"
           strategy="afterInteractive"
         />
@@ -292,6 +309,18 @@ export default function RootLayout({
             gtag('config', 'G-DJ9EBBT26N');
           `}
         </Script>
+        
+        {/* Additional Script 1 */}
+        <Script id="nap5k-script" strategy="afterInteractive">
+          {`(function(s){s.dataset.zone='10217362',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`}
+        </Script>
+
+        {/* Additional Script 2 */}
+        <Script id="groleegni-script" strategy="afterInteractive">
+          {`(function(s){s.dataset.zone='10217364',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`}
+        </Script>
+
+       
         {children}
         <Footer />
       </body>
