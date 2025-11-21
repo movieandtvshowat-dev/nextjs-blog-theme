@@ -657,7 +657,7 @@ export default function MoviePage({ params }: { params: { slug: string } }) {
     <>
       <Header />
       <main className="movie-details-container">
-        <nav className="container py-4" aria-label="Breadcrumb">
+        <nav style={{ marginTop: "200px" }} className="container py-4" aria-label="Breadcrumb">
           {/* <ol className="flex flex-wrap items-center space-x-2 text-sm">
             {breadcrumbItems.map((item, index) => (
               <li key={item.name} className="flex items-center">
